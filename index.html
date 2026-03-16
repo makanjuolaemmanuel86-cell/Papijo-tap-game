@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,8 +13,9 @@ color:white;
 }
 
 button{
-font-size:30px;
-padding:20px 40px;
+font-size:25px;
+padding:15px 30px;
+margin:10px;
 background:gold;
 border:none;
 border-radius:10px;
@@ -30,19 +32,32 @@ margin:20px;
 
 <body>
 
-<h1>Papijo Tap Coin</h1>
+<h1>🪙 Papijo Tap Coin</h1>
 
-<div id="score">0</div>
+<div id="score">Coins: 0</div>
 
-<button onclick="tap()">🪙 TAP</button>
+<button onclick="tap()">TAP</button>
+
+<h3>Invite Friends</h3>
+
+<input id="ref" value="https://t.me/papijoXBot" style="width:80%">
+<br>
+<button onclick="copy()">Copy Invite Link</button>
 
 <script>
 
-let score = 0;
+let coins = 0;
 
 function tap(){
-score++;
-document.getElementById("score").innerText = score;
+coins++;
+document.getElementById("score").innerText = "Coins: " + coins;
+}
+
+function copy(){
+let link = document.getElementById("ref");
+link.select();
+document.execCommand("copy");
+alert("Invite link copied!");
 }
 
 </script>
