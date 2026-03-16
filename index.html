@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Papijo Tap Game</title>
+
+<style>
+body{
+text-align:center;
+font-family:Arial;
+background:#111;
+color:white;
+}
+
+button{
+font-size:30px;
+padding:20px 40px;
+background:gold;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+#score{
+font-size:40px;
+margin:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Papijo Tap Coin</h1>
+
+<div id="score">0</div>
+
+<button onclick="tap()">🪙 TAP</button>
+
+<script>
+
+let score = 0;
+
+function tap(){
+score++;
+document.getElementById("score").innerText = score;
+}
+
+</script>
+
+</body>
+</html>
